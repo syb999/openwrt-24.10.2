@@ -3147,6 +3147,18 @@ define Device/winstars_ws-wn583a6
 endef
 TARGET_DEVICES += winstars_ws-wn583a6
 
+
+define Device/witown_treebear
+  $(Device/dsa-migration)
+  $(Device/uimage-lzma-loader)
+  IMAGE_SIZE := 32448k
+  DEVICE_VENDOR := Witown
+  DEVICE_MODEL := TreeBear
+  DEVICE_PACKAGES := kmod-mt7603 kmod-mt76x2 \
+	kmod-usb3 -uboot-envtools
+endef
+TARGET_DEVICES += witown_treebear
+
 define Device/wodesys_wd-r1802u
   $(Device/dsa-migration)
   $(Device/uimage-lzma-loader)
